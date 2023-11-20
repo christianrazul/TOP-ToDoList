@@ -1,0 +1,1 @@
+(()=>{alert("hello world");const e=document.querySelector("#content");e.textContent="fuck u nigga",document.body.appendChild(e)})();
