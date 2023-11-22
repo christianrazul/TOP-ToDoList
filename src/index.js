@@ -1,7 +1,3 @@
-alert("hello world");
+import pageLoad from "./initialLoad.js";
 
-const CONTENT = document.querySelector("#content");
-
-CONTENT.textContent = "fuck u nigga";
-
-document.body.appendChild(CONTENT);
+pageLoad();
