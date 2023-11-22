@@ -1,1 +1,1 @@
-(()=>{"use strict";document.querySelector("#addTask").addEventListener("click",(()=>{alert("ffff")}))})();
+(()=>{"use strict";document.querySelector("#addTask").addEventListener("click",(()=>{document.querySelector(".task").style.display="grid"})),document.querySelector("#taskAddButton").addEventListener("submit",(e=>{e.preventDefault()}))})();
