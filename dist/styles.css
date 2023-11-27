@@ -39,4 +39,24 @@ body {
 
 /* ----------- Header ----------- */
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+
+  background-color: var(--bgColor3);
+  border-bottom: 3px solid var(--accent);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--textColor);
+}
+
+.title span {
+  color: var(--accent);
+}
+
 /* ----------- Main ----------- */
