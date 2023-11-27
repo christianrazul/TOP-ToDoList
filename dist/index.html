@@ -11,12 +11,19 @@
       <h1 class="title">What<span>ToDo</span></h1>
     </header>
     <main id="content">
-      <button id="addTask">Add Task</button>
-      <form class="task">
-        <label for="taskTitle">Title</label>
-
-        <input type="submit" value="Add" id="taskAddButton" />
-      </form>
+      <div class="navigation-panel">
+        <div class="home">
+          <h2>Home</h2>
+          <div class="tile selected" id="all-tasks">All Tasks</div>
+          <div class="tile" id="today-tasks">Today</div>
+          <div class="tile" id="next-week-tasks">Next 7 Days</div>
+          <div class="tile" id="important-tasks">Important</div>
+        </div>
+        <div class="projects">
+          <h2>Projects</h2>
+        </div>
+      </div>
+      <div class="tasks-panel"></div>
     </main>
     <footer></footer>
     <script src="main.js"></script>

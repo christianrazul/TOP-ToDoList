@@ -43,15 +43,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem;
+  padding: 0.5rem 0;
 
   background-color: var(--bgColor3);
-  border-bottom: 3px solid var(--accent);
+  border-bottom: 2px solid var(--accentDark);
 }
 
 .title {
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--textColor);
 }
 
@@ -60,3 +60,43 @@ header {
 }
 
 /* ----------- Main ----------- */
+
+#content {
+  display: flex;
+}
+
+.navigation-panel {
+  background-color: var(--bgColor1);
+  flex: 0.5;
+  min-height: 91.5vh;
+  padding: 1rem;
+}
+
+.home,
+.projects {
+  color: var(--textColor);
+}
+
+.home h2,
+.projects h2 {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--textColor);
+}
+
+.tile {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.selected {
+  background-color: rgba(31, 141, 77, 0.5);
+  border-left: 2px solid var(--accent);
+  border-radius: 3px;
+}
+
+.tasks-panel {
+  background-color: var(--bgColor2);
+  flex: 2;
+}
+
+/* ----------- Footer ----------- */
