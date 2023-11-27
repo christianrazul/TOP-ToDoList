@@ -11,6 +11,7 @@
   --textColor: #eaebec;
   --accent: #2abd67;
   --accentDark: #1f8d4d;
+  --btnWidth: 70px;
 }
 
 *,
@@ -61,6 +62,8 @@ header {
 
 /* ----------- Main ----------- */
 
+/* ------ Navigation-Panel ------ */
+
 #content {
   display: flex;
 }
@@ -83,6 +86,13 @@ header {
   border-bottom: 2px solid var(--textColor);
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
 .tile {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
@@ -94,9 +104,67 @@ header {
   border-radius: 3px;
 }
 
+.project-input {
+  display: flex;
+  flex-direction: column;
+}
+
+#project-name {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-buttons input {
+  padding: 0.6rem;
+  border: 0;
+  border-radius: 3px;
+  width: var(--btnWidth);
+  color: var(--textColor);
+}
+
+.project-submit-btn {
+  background-color: var(--accentDark);
+}
+
+.project-cancel-btn {
+  background-color: rgb(172, 2, 2);
+}
+
+.add-project-btn {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  color: var(--textColor);
+  background-color: var(--bgColor1);
+  border: 0;
+}
+
+.add-project-btn:hover {
+  background-color: rgb(36, 55, 74);
+  transition: 0.1s;
+}
+
+/* ------ Tasks Panel ------ */
+
 .tasks-panel {
   background-color: var(--bgColor2);
   flex: 2;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  background-color: var(--accentDark);
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
 }
 
 /* ----------- Footer ----------- */

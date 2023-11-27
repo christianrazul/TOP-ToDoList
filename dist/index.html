@@ -21,9 +21,23 @@
         </div>
         <div class="projects">
           <h2>Projects</h2>
+          <form class="projects-form" id="project-form">
+            <div class="project-input">
+              <input type="text" name="project-name" id="project-name" placeholder="Enter Project Name" />
+              <div class="form-buttons">
+                <input type="submit" class="project-submit-btn" value="Add" />
+                <input type="button" class="project-cancel-btn" value="Cancel" />
+              </div>
+            </div>
+          </form>
+          <button class="add-project-btn">Add Project</button>
         </div>
       </div>
-      <div class="tasks-panel"></div>
+      <div class="tasks-panel">
+        <div class="task-title">
+          <h1>All Tasks</h1>
+        </div>
+      </div>
     </main>
     <footer></footer>
     <script src="main.js"></script>
