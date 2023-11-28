@@ -161,10 +161,25 @@ header {
   flex-direction: column;
 }
 
-.task-title {
+.list-title {
   background-color: var(--accentDark);
   padding: 1.5rem 1rem;
   border-radius: 5px;
+  color: var(--textColor);
+}
+
+.list-items {
+  color: var(--textColor);
+  margin: 2rem 0;
+}
+
+.list-items ul {
+  list-style-type: none;
+}
+
+.list-items ul li {
+  padding: 1rem;
+  background-color: var(--bgColor3);
 }
 
 /* ----------- Footer ----------- */
