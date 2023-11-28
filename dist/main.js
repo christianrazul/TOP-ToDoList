@@ -1,1 +1,1 @@
-(()=>{const e=document.querySelector("[data-add-task-form]");document.querySelector("[data-task-list]"),e.addEventListener("click",(()=>{alert("hello")}))})();
+(()=>{const e=document.querySelector("[data-add-task-form]");document.querySelector("[data-task-list]"),e.addEventListener("click",(e=>{e.preventDefault()}))})();
