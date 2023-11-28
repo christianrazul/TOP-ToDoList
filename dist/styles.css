@@ -180,6 +180,22 @@ header {
 .list-items ul li {
   padding: 1rem;
   background-color: var(--bgColor3);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.unchecked {
+  width: 2rem;
+  height: 2rem;
+  border: solid 2px var(--textColor);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.list-info {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ----------- Footer ----------- */
