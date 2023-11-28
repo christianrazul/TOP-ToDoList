@@ -1,18 +1,18 @@
-class Task {
-  constructor(title, description, dueDate) {
-    return title, description, dueDate;
-  }
+// class Task {
+//   constructor(title, description, dueDate) {
+//     return title, description, dueDate;
+//   }
 
-  displayTask() {
-    console.log(this.title);
-  }
-}
+//   displayTask() {
+//     console.log(this.title);
+//   }
+// }
 
-let todoList = [];
+// let todoList = [];
 
-function displayAddTaskForm() {
-  const TASK_FORM = document.querySelector(".task");
-  TASK_FORM.style.display = "flex";
-}
+// function displayAddTaskForm() {
+//   const TASK_FORM = document.querySelector(".task");
+//   TASK_FORM.style.display = "flex";
+// }
 
-export default displayAddTaskForm;
+// export default displayAddTaskForm;
