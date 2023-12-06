@@ -1,4 +1,8 @@
+// -------- Imports -------- //
+
 import Task from "./classes/taskClass.js";
+
+// -------- Query Selectors -------- //
 
 const addTaskForm = document.querySelector("[data-add-task-form]");
 const taskList = document.querySelector("[data-task-list]");

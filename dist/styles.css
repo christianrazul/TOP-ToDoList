@@ -197,6 +197,65 @@ header {
   border-radius: 5px;
 }
 
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+.item-checkbox input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.item-checkbox *,
+.item-checkbox ::after,
+.item-checkbox ::before {
+  box-sizing: border-box;
+}
+
+.item-checkbox {
+  position: relative;
+  display: block;
+  /* overflow: hidden; */
+}
+.item-checkbox .check {
+  width: 100px;
+  height: 500px;
+  position: absolute;
+}
+.item-checkbox .label svg {
+  vertical-align: middle;
+}
+.item-checkbox .path1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: 0.25s all;
+}
+.item-checkbox .check:checked + label svg g path {
+  stroke-dashoffset: 0;
+}
+
+.item-checkbox .check:checked + label span {
+  text-decoration: line-through;
+}
+
 .unchecked {
   width: 2rem;
   height: 2rem;
