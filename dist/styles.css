@@ -130,11 +130,13 @@ header {
 }
 
 .form-buttons input {
-  padding: 0.6rem;
+  padding: 0.6rem 2rem;
   border: 0;
   border-radius: 3px;
-  width: var(--btnWidth);
   color: var(--textColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-submit-btn {
@@ -197,65 +199,34 @@ header {
   border-radius: 5px;
 }
 
-input[type="checkbox"] {
-  /* Add if not using autoprefixer */
-  -webkit-appearance: none;
-  /* Remove most all native input styles */
-  appearance: none;
-  /* For iOS < 15 */
-  background-color: var(--form-background);
-  /* Not removed via appearance */
-  margin: 0;
-
-  font: inherit;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 0.15em;
-  transform: translateY(-0.075em);
-
-  display: grid;
-  place-content: center;
-}
-
-.item-checkbox input[type="checkbox"] {
-  visibility: hidden;
-  display: none;
-}
-
-.item-checkbox *,
-.item-checkbox ::after,
-.item-checkbox ::before {
-  box-sizing: border-box;
-}
-
 .item-checkbox {
-  position: relative;
-  display: block;
-  /* overflow: hidden; */
-}
-.item-checkbox .check {
-  width: 100px;
-  height: 500px;
-  position: absolute;
-}
-.item-checkbox .label svg {
-  vertical-align: middle;
-}
-.item-checkbox .path1 {
-  stroke-dasharray: 400;
-  stroke-dashoffset: 400;
-  transition: 0.25s all;
-}
-.item-checkbox .check:checked + label svg g path {
-  stroke-dashoffset: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
-.item-checkbox .check:checked + label span {
+#todo-title {
+  flex: 1;
+}
+
+.todo-btn-completed,
+.todo-btn-delete {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 3px;
+  color: var(--textColor);
+  background-color: var(--accentDark);
+}
+
+.todo-btn-delete {
+  background-color: rgb(172, 2, 2);
+}
+
+.done {
   text-decoration: line-through;
+  opacity: 0.5;
 }
-
 .unchecked {
   width: 2rem;
   height: 2rem;
@@ -283,15 +254,14 @@ input[type="checkbox"] {
   color: var(--textColor);
   background-color: inherit;
   border: 0;
-  width: 80rem;
   padding: 0.5rem;
+  flex: 1;
 }
 
 #add-item-button {
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   border: 0;
   border-radius: 3px;
-  width: var(--btnWidth);
   color: var(--textColor);
   background-color: var(--accentDark);
 }

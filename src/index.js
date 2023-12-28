@@ -1,37 +1,50 @@
-// -------- Imports -------- //
+// ----- IMPORTS ----- //
 
-import Task from "./classes/taskClass.js";
+// ----- QUERY SELECTORS ----- //
+const todoList = document.querySelector("[data-todo-list]");
+const todoAddForm = document.querySelector("[data-add-todo-form]");
+const todoAddText = document.querySelector("[data-add-todo-text]");
+const todoAddBtn = document.querySelector("[data-add-todo-btn]");
+const TEMPLATE = document.querySelector("[data-item-template]");
 
-// -------- Query Selectors -------- //
+// ----- EVENT LISTENERS ----- //
+todoAddBtn.addEventListener("click", addTodo);
 
-const addTaskForm = document.querySelector("[data-add-task-form]");
-const taskList = document.querySelector("[data-task-list]");
-const taskStatus = document.querySelector("[data-task-status]");
+// ----- FUNCTIONS ----- //
+function addTodo(event) {
+  // Prevent default form submission
+  event.preventDefault();
 
-function addTaskItem() {
-  const taskItemTitle = document.querySelector("[data-task-title]");
-  const taskItem = document.createElement("li");
+  if (todoAddText.value === "") return alert("Task cannot be empty");
 
-  taskItem.innerHTML = `
-  <div class="unchecked" data-task-status></div>
-  <div class="list-info">
-    <h3 class="list-info-title">${taskItemTitle.value}</h3>
-    <h4 class="list-info-src">Test</h4>
-  </div>
-  `;
+  if (todoAddText.value !== "") {
+    // Create new todo element by making a node(copy) of the template
+    const newTodo = TEMPLATE.content.cloneNode(true);
 
-  taskList.appendChild(taskItem);
+    // Set the todoTitle of the new todo to the value of the input
+    const todoTitle = newTodo.querySelector("#todo-title");
+    todoTitle.innerText = todoAddText.value;
+
+    const todoCompleted = newTodo.querySelector(".todo-btn-completed");
+    todoCompleted.addEventListener("click", () => {
+      todoTitle.classList.toggle("done");
+      if (todoCompleted.innerText === "Undo") {
+        todoCompleted.innerText = "Completed";
+      } else {
+        todoCompleted.innerText = "Undo";
+      }
+    });
+
+    const todoDelete = newTodo.querySelector(".todo-btn-delete");
+    todoDelete.addEventListener("click", () => {
+      const todo = todoDelete.parentElement;
+      todoList.removeChild(todo);
+    });
+
+    // Append new todo to the list
+    todoList.append(newTodo);
+
+    // Clear the input
+    todoAddText.value = "";
+  }
 }
-
-// -------- Event Listeners -------- //
-
-addTaskForm.addEventListener("submit", (element) => {
-  element.preventDefault();
-  addTaskItem();
-});
-
-taskStatus.addEventListener("click", (e) => {
-  console.log("test");
-  const taskTitle = document.querySelector(".list-info-title");
-  taskTitle.style.text_decoration = "line-through";
-});
